@@ -28,31 +28,59 @@ You choose the attack strategy:
 - **Warrior Visibility**: Affects defense (higher visibility = less damage)
 - **Warrior Power**: Decreases with each alien attack
 
-## 🎯 Key Features
-
-### Observation Systems
-- **Satellite**: Tracks half of the attacking aliens
-- **Telescope**: Tracks all attacking aliens
-- **Visibility**: Improves with each Warrior attack, reducing incoming damage
-
-### Attack Strategies
-- **FullAttackStrategy**: All aliens attack at once
-- **PartialAttackStrategy**: Custom number of aliens attack
-
-### Game Mechanics
-- Turn-based combat system
-- Real-time status tracking
-- Strategic decision making for alien attacks
-- Progressive difficulty as visibility changes
-
 ## 🏃‍♂️ How to Run
 
 ### Prerequisites
 - Java JDK 8 or higher
-- Git (optional)
 
-### Running the Game
-1. **Clone the repository**:
-   ```bash
-   git clone <your-repository-url>
-   cd AlienGame
+
+# Compile all Java files
+javac src/*.java
+
+# Run the game
+java -cp src BattleGame
+
+🎮 Game Controls
+During Alien Army's turn:
+
+Enter 1 for Full Attack
+
+Enter 2 for Partial Attack, then enter number of aliens
+
+📊 Status Display
+text
+Warrior - Power: 100, Visibility: 5
+AlienArmy - Remaining aliens: 20
+🏆 Winning Conditions
+Warrior Wins: All aliens destroyed
+
+Alien Army Wins: Warrior power ≤ 0
+
+🛠️ Project Structure
+text
+AlienGame/
+├── src/
+│   ├── BattleGame.java
+│   ├── Warrior.java
+│   ├── AlienArmy.java
+│   ├── Satellite.java
+│   ├── Telescope.java
+│   ├── AlienArmyObserver.java
+│   ├── AttackStrategy.java
+│   ├── FullAttackStrategy.java
+│   └── PartialAttackStrategy.java
+└── README.md
+💡 Tips
+Higher visibility = less damage
+
+Use Partial Attack when visibility is high
+
+Monitor your power level
+
+🐛 Troubleshooting
+bash
+# Check Java installation
+java -version
+javac -version
+
+# If "command not found", install Java JDK
